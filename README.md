@@ -1,4 +1,4 @@
-# WebVulnLab Findings
+# WebVulnLab
 
 Welcome to WebVulnLab! This repository contains my practice findings and discoveries in web vulnerability discovery and exploitation.
 
