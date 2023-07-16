@@ -27,6 +27,7 @@
 - After modifying the "cmd" and injecting the `whoami` command, the system responded with the output displaying the username that is www-data.
 
 - cmd: `789)^2))}';whoami;#`
+
 ![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/a8a3314e-a231-4d18-815b-7b6d8ad44027)
 
 ```html
