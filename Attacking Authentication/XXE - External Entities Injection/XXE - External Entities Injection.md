@@ -1,2 +1,0 @@
-# XXE - External Entities Injection
-
