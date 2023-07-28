@@ -16,7 +16,7 @@
   - Passwords: letmein, 123456, teashop
 - Next, we will intercept the request and send it to the intruder.
 
-![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/8e81949b-4f3f-492a-8e87-f8344d6d3046)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/cbc5dc36-d8ea-4d80-937d-ba3442b9d5d5)
 
 - Next, we will use the attack method as cluster bomb load the username list and the top 3 passwords.
 
