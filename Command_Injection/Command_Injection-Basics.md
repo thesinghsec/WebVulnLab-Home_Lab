@@ -2,7 +2,7 @@
 
 - In the network analysis tab, I am proceeding to conduct command injection to assess the system's vulnerability.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/66d01096-35bd-492c-a5c0-5ca6bc3e7e59)
+![image](https://github.com/singhx-hub/WebVulnLab/tree/main/assets/126919241/66d01096-35bd-492c-a5c0-5ca6bc3e7e59)
 
 - By utilizing the command `https://<IP>; whoami;echo http/`, I successfully fetched the user information.
 
