@@ -8,7 +8,7 @@
 - We need brute-forcing to crack the password of a user named "Jeremy"
 - For this let's intercept the request to the Burp suite.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/27555f00-a3f2-4dc1-849d-2eb7dc32bc52)
+![image](https://github.com/thesinghsec/WebVulnLab/126919241/27555f00-a3f2-4dc1-849d-2eb7dc32bc52)
 
 - After sending a request to the intruder we selected the payload password parameter by clicking on Add.
 - Next step is to add a wordlist to start the brute-forcing the password on the user "Jeremy"
