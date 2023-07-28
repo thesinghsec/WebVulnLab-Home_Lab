@@ -26,12 +26,14 @@
 
 - On trying with username `jeremy` and password `letmein` we got successfully logged in.
 
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/daf91b78-5a46-46d8-a84e-8dff5a6e55ff)
+
 ## Alternate
 
 - To make the process brute-forcing faster we will copy the intercepted request and copy it to a file in the local machine.
 - Make a change in copied request by renaming the password parameter to "FUZZ" and saving it.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/1b0d0668-9795-4b3f-9766-1395eef0a1e6)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/43923268-bf21-44c3-8efa-90c23136bffd)
 
 - Now, we use a tool named "FFUF" to make the brute-forcing process faster.
 - Command: `ffuf -request req.txt -request-proto http -w /usr/share/wordlists/seclists/SecLists-master/Passwords/xato-net-10-million-passwords-10000.txt`
