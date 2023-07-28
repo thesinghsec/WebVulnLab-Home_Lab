@@ -23,19 +23,20 @@
 
 - After several attempts, I was successfully able to upload the php file with the command into it.
 
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/ee01ec02-7852-4337-9182-d8089035be62)
 
 - Successfully navigating to the file, and by sending the command along with the URL I got results back.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/ad1aaf01-19ef-4fd7-810c-eb82d56122e0)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/0fa822b3-378f-4bd9-946e-47cc6c7df145)
 
 - Let's move to get a reverse shell back into our system.
 - For this, I inject a PHP reverse shell and start Netcat to capture the request.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/edc7c18d-ed85-4f10-a531-adaf8b16651b)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/e53e175f-23f9-4f07-8a85-84c4c5c62d43)
 
 - Upon navigating to the file I got the reverse shell back to my Netcat listener.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/485b3175-8c03-44da-916d-2a5047882332)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/1b101718-de18-4634-8bb4-59404f734d77)
 
 ```bash
 └─$ rlwrap nc -nvlp 1234
