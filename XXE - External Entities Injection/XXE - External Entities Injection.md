@@ -2,7 +2,7 @@
 
 - We have got a file upload feature.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/535cac51-9049-459b-9050-a63d4a984df1)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/9981feb5-f4be-4001-9aaa-7934811898a9)
 
 - make a file with a username and password in the form of an XML file.
 
@@ -15,7 +15,7 @@
 ```
 - while uploading the file we got the username and password.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/12ebc9c5-12a4-4cb5-a0e2-8bbc9026cbad)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d6e4a841-c958-4438-a800-c2734a84807b)
 
 - Now, we will parse an XML file which will return us the passwd file.
 
@@ -28,8 +28,8 @@
 ```
 - On uploading the file we got data of the passwd file back.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/ddedf793-91a2-409d-a5e8-5a1e92e03612)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/85bde9bf-fa9a-4da0-a93e-bd0f6c9018ea)
 
 - To view it more neatly, we will switch to the view source by using ctrl+U.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/6795fc3f-2137-4bc3-aa9c-db206c930f11)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/2f532ae5-d302-460f-94e9-05172b6d24e9)
