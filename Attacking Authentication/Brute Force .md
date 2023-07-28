@@ -14,22 +14,17 @@
 - After sending a request to the intruder we selected the payload password parameter by clicking on Add.
 - Next step is to add a wordlist to start the brute-forcing the password on the user "Jeremy"
 
-![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/504493fe-d6c9-4faf-bae3-d5ab3068574e)
 ![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a55dbd36-74d2-45cc-af29-9a19d6fec711)
-
 
 - On adding the wordlist as the payload of passwords we selected Start attack.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/de3fdf99-75e2-468b-9530-bb236ef24812)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/b1a0b5f7-2903-4c29-97f1-b3668a9f1bd7)
 
 - There is a page length difference in the result hope we have got our password successfully
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/b9e7f512-6980-4eb9-a09d-3734430f205e)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a2eaf728-e979-4808-8487-b7c922322c49)
 
 - On trying with username `jeremy` and password `letmein` we got successfully logged in.
-
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/229f2a26-a60f-43ac-ae69-5bd5e7ab2b50)
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/534c981e-7bc8-4107-9353-f29e1b81bc21)
 
 ## Alternate
 
