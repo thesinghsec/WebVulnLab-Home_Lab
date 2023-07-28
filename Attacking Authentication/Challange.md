@@ -2,49 +2,48 @@
 
 **Warning: Accounts will lock after 5 failed login attempts!**
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/b3ff9277-78ad-4c7c-ae16-a126eecc4133)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/5d11e1e5-9dca-4236-bb79-154b0f6511b9)
 
 - On trying a random username and password we got 1 incorrect login attempt.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/23adffeb-86ab-4814-bf83-91bfa4596b76)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/5ccbd5ae-28b0-437a-b456-4492418c2956)
 
 - While submitting another random username and password we revert nothing, so here is the indication that the admin user exists.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/b0f9f36f-0ab9-4b56-85b4-dd1ef2706f6c)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d38a332f-aa91-4d4a-b83e-9724fb096615)
 
 - We will make a list of the top 3 most used passwords to not let the accounts lock.
   - Passwords: letmein, 123456, teashop
 - Next, we will intercept the request and send it to the intruder.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/c9fcb255-45fd-49a3-af50-5efb8267a5f9)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/8e81949b-4f3f-492a-8e87-f8344d6d3046)
 
 - Next, we will use the attack method as cluster bomb load the username list and the top 3 passwords.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/74543637-791e-42bf-bc33-01fa0e4504f6)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/8d801b11-f8b0-452d-8a7f-80954cefd934)
 
 - After clicking on start attack we have got the user `admin` and password `letmein`.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/91ef9bae-11d9-42c9-ac3b-9b82247ad6b5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/f7836e5b-7c95-48a8-8643-c5824f135260)
 
 - On entering the details of user admin and password letmein. We have successfully logged in.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/774a4798-18b1-4a3a-9ae1-f7e01671af4b)
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/7cffb1c4-e28d-4f68-9e56-24b57d296415)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a831f884-01aa-4c5f-9d02-280d82955450)
 
 ## Alternate:
 
 - We can use the tool called ffuf,wffuf, and hydra to achieve the same. This time let's use ffuf.
 - For using ffuf we need to copy the request and save it to a file in the local machine.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/2142ecd3-01e8-4267-a66c-4a72ed2ee44d)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/7c34c88a-ae73-4e0d-a0dc-2af13089893e)
 
 - On saving the request to the file, we need to do some modifications to the file by defining the arguments to get suitable results.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/a51e953e-82e0-4605-930a-72672b12ae28)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/f33c1da9-ad50-42a7-bd5d-ea48165b37ff)
 
 - Make a file of the top 3 passwords.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/642dd3ce-17c9-4c42-93b4-b83c2c84eea7)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d5f9a155-f04a-42f9-9085-dd15755c9d97)
 
 - By using the command: `ffuf -request reqs.txt -request-proto http -mode clusterbomb -w pass.txt:FUZZPASS -w /usr/usernames-shortlist.txt:FUZZUSER -fs 3376,3256`
 
