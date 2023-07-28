@@ -7,19 +7,19 @@
 
 - Upon successfully logging in using the provided credentials, we discovered a welcome message within the system.
   
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/387608a4-d4ed-4ff0-91c6-f662b287bfca)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/da9463ed-fda5-4ef4-97ad-2d910cb6cea5)
 
 - After intercepting the request using Burp Suite, I successfully sent it to the Repeater tool for further analysis and manipulation.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/09433af8-6b97-447c-8494-e941f1650c66)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/46289fcf-dfff-481c-92bc-fe81d950c8c6)
 
 - During the process of sending the request through the Repeater tool, Observe the Content-Length header. The Content-Length indicates the size of the request body in bytes. Understanding the Content-Length can indeed be helpful when crafting or modifying subsequent requests, especially when dealing with different sets of credentials or payloads.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/dc6cbd06-8c60-4687-826a-fb2a2b558cc7)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d28f1f7a-8e88-4e6d-9c10-0fad0db1029a)
 
 - By repeatedly passing incorrect credentials, observe the changes in the Content-Length.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/880f45f5-09d2-48b3-8560-f6631ff1e98c)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/520d3924-929d-4db5-8625-53304fb8573e)
 
 - Copy the entire request, including the request method, headers, and body. Open a text editor Create a new file in the text editor and paste the copied request into it. Save the file with an appropriate name, such as "request.txt".
 
@@ -91,27 +91,27 @@ it is recommended to perform only basic UNION tests if there is not at least one
 
 - No SQL injection found. Upon further investigation in Burp Suite, we discovered a token being sent with the POST request.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/5a1b6356-23bc-47c2-b671-e92d3869ed18)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/3512d294-ff25-4f09-b555-4b4369e85ed2)
 
 - After sending the request to the repeater in Burp Suite, I carefully observed and noted the Content-Length value in the response.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/3ba0ab10-58ee-46fc-b618-28572809a477)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/386a75b3-aff8-463e-8c74-83bd9d0907c8)
 
 - Upon manipulating the session cookie by adding `' and 1=1#`, and observing that the response remains the same, it strongly suggests the presence of a SQL injection vulnerability within the application.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/aff2d1d2-370e-474d-84c4-3db444d190a5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/804d6b66-a89e-4a9d-a61a-77516a6a863b)
 
 - By crafting the payload `' and ((select version()), 1, 5) = '8.0.3'#` and receiving a positive response, it strongly indicates that the underlying SQL database is running version 8.0.3
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/d64c36c5-ce3c-4201-89d7-d5316607920b)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/c415d557-f5cb-4936-b5b0-3499636110cf)
 
 - let's grab passwords from the DB by sending payload `' and substring(select password from injection0x02 where username = 'jessamy'), 1, 1) = 'a'#` We get an error response, to make the injection fast send the request to the intruder and send the characters for verification.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/ee2ac5b0-bf21-46ea-857f-4867c7825bc5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/89c4bfc1-49cc-4d8a-b3dc-0220837a52a9)
 
 - By crafting a list of character payloads and sending them as requests, we received responses back from the target system.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/e6b6c998-4c1c-4a1f-84de-9ea2a1e716a2)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/24eba318-9beb-4f7e-919c-2b5c2153daae)
 
 - use SQLMap with the captured request and exclude the injection code, and save the request to a file named "request2.txt"
 
