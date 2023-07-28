@@ -2,17 +2,15 @@
 
 - On login to the account we have got our account details.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/cac7160e-a5f3-48f5-aa00-ee08c6664c7e)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/53d24180-6d47-4991-919e-08d247f586d8)
 
 - On a quick look at the URL we have got an account with a number.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/edc9c12e-c0ea-4b43-b627-bb6c02ff4079)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/2c81666e-d727-4d30-bbb4-eae8e06d3403)
 
 - by changing the number to any random characters we got the details of another user easily.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/24c91d46-c2fa-4427-8df6-dd4c6ecd85b0)
-
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/f06b6298-605c-49ed-859e-b75108817d2d)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/21c87ca6-435a-4cb5-926f-0d4463737e42)
 
 - To get details of all users we will make a file of 1-2000 numbers to exploit the account.
 - For this, we will use Python code to create a file of numbers.
@@ -71,8 +69,6 @@ ________________________________________________
 ```
 - Now, we can copy the account number and see the account details of the user.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/e189c142-8d95-4ae8-bacb-18661d206856)
-
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/9a90e4c6-60a6-4a31-9187-197182c2913a)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/c7dc4444-5e4a-4f88-9bb3-4a84df4dc08f)
 
 - Similarly, we can check for other accounts too.
