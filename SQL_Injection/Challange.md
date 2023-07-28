@@ -2,23 +2,23 @@
 
 By sending injection payload with the item name we get positive results.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/0484b247-3695-46bd-a03d-d577e3140c55)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/23adab84-1130-4437-ab58-bb83f4eea711)
 
 On sending simple requests through Repeater we got the content length of 2516 with details of the product.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/2de90f1a-a100-4b32-9e81-7e5a028eb6af)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a4e03904-fe47-4f30-8d21-9b436dd97760)
 
 On trying the Union query with payload: `' union select 1,2,3,4#` in the encoded form we get positive feedback.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/89e4587c-4e0f-4017-a768-947d4a7a4a89)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a5ad3c57-3ec6-4a05-bb65-b2bb8f1f428c)
 
 On trying to extract the version info get the version in return.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/6f73d06f-1057-4fa5-83da-e353a97667c2)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/0667ba7b-9e1e-482c-ad91-89a9752fd6ce)
 
 Dump table names using the cmd:`'+union+select+1,2,3,table_name+from+information_schema.tables%23`
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/dedd7170-d45e-48c8-a09e-5e90bfa63828)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/02c07a54-e718-477f-9069-d398b2bd4989)
 
 Give a try with a tool called sqlmap, by coping request data to a file.
 
