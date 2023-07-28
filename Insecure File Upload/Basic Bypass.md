@@ -2,31 +2,31 @@
 
 - When I arrived at the website, I discovered a section dedicated to uploading files.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/d5cbe3a2-4aaa-4535-b336-98f8d57ee180)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/1648bea8-6859-47c1-a990-e0d8533e6e22)
 
 - During my testing, I attempted to upload a text file, but I encountered a restriction stating that only PNG and JPG files are permitted for uploading.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/d7d868bf-26bc-4d31-ab81-4f077aac26d8)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/914c4299-4da3-4e5c-a68a-ab1bb13ff602)
 
 - Once again, I attempted to upload the file to observe if any requests were sent to the server. However, after I looked it over, I did not see any requests being made during the upload process.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/1c781bad-d29f-4b42-9d63-17504129ac1f)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/82a8f37e-2833-4fab-b39a-79f928fd5588)
 
 - I repeated the process of uploading a PNG file and intercepted the corresponding request using Burp Suite for analysis.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/fb4121b3-103b-4290-b836-7fe5d38ac7a5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/e420cf1e-5dfb-4d57-9ed9-07d1271a716f)
 
 - After sending the request to the repeater in Burp Suite, I proceeded to make some minor modifications to the request in an attempt to achieve my goal. I changed the file name extension from "png" to "txt" and removed the image data. Instead, I inserted the text "Hello" in its place.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/e2015bbf-a607-4723-9366-d1477792aeb1)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/44bf9630-045d-4f0d-b344-16b6d36e5b52)
 
 - Following the successful modification of the request, I refreshed the browser page to verify if the file was indeed uploaded.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/5fa3786f-9a4d-4728-906a-1d4d35f4864a)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a38ca213-ebd1-42eb-afbf-c228d7732a2a)
 
 - This time I used a PHP cmd to extract the data from the server. For this, I have changed the filename and inserted the PHP command.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/73dc4603-c050-464e-9c5a-72b757c27ca3)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/bde039b8-5706-4e50-9e0d-36e2e0d86eeb)
 
 
 - In my attempt to locate the uploaded file folder, I utilized the tool "ffuf." Through this process, I successfully discovered an "upload" folder located under the "labs" directory.
@@ -73,28 +73,28 @@ ________________________________________________
 ```
 - Upon navigating to the discovered "upload" folder under the "labs" directory, I obtained the following output:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/cae49e62-5127-4e30-9bf7-bfcd84456367)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/1bfdec73-bf4d-4206-b0a6-7cd313bdbc5e)
 
 - To get the desired output, I need to send a command with argument, so I tried with this command in the URL:
 - cmd: `http://localhost/labs/uploads/cmd.php?cmd=whoami`
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/d8948a76-112e-414f-809d-54c483d2e1f0)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/f598091a-35ee-470f-99e9-37a4067e635a)
 
 - I am also able to fetch the passwd file by using command: `http://localhost/labs/uploads/cmd.php?cmd=cat /etc/passwd`
 
- ![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/a920f6d3-cb03-4599-8d49-03c7cf64ad4b)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/b5c6aeba-e3d9-4607-ba83-0f9ac58e182f)
 
 - To improve the view I switched to the page source.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/b37a7da5-0231-4852-9e4a-20c0f179375a)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a5933a85-c103-4314-8aa8-5fdedf16bac3)
 
 - I am also able to get a reverse shell to my system by using the [pentest-monkey](https://github.com/pentestmonkey/php-reverse-shell/blob/master/php-reverse-shell.php) PHP reverse shell script.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/7ff235b7-fb4b-47c1-beb1-64f1d29e80e3)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/0d8ff565-0466-45d5-ae5f-e789aad11976)
 
 - After setting the Netcat listening server and navigating to the file I am indeed successful in getting the reverse shell back to my system.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/9f460a22-04a6-4f2d-bbf6-d2b2cfe11ff3)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/7fe8a9c7-b777-4a97-b38e-0d53086e1b66)
 
 ```bash
 └─$ rlwrap nc -nvlp 1234
