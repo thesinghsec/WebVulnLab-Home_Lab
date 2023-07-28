@@ -2,39 +2,38 @@
 
 - Upon revisiting the website, I got this interface:
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/2d54d0d5-ffd1-4886-8286-c0159b70184f)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/7adb3cf7-0b83-48c9-9154-d8c3251e4472)
 
-- Try to upload txt file, unfortunately it didn't worked.
+- Try to upload txt file, unfortunately, it didn't work.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/677ee334-bd77-47ad-89b3-d89490f91592)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/15d0269b-c87d-459c-b64f-4dd89c8ae2e6)
 
-- I upload a png file and Intercept the request to the burp suite and there I got request with image data.
+- I upload a png file and Intercept the request to the burp suite and there I got a request with image data.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/e65918ce-c70b-424f-9ab1-c394f29c3ed9)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/9e7de415-039f-46e2-9f04-7a03beb229e9)
 
-- I try to upload a php file with php command into it, I got failed with a message that only "png" & "jpg" files are allowed.
+- I try to upload a php file with php command into it, but I got failed with a message that only "png" & "jpg" files are allowed.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/f46ea209-b653-48aa-ab21-d83d681c1e41)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/cb93754b-f3d6-42fa-957f-27d15b1627fc)
 
-- This indicated that the request is made from the server side not client side
-- So here is something I can do with the magic bytes data of png file.
+- This indicated that the request is made from the server side, not client side
+- So here is something I can do with the magic bytes data of a png file.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/35d48bbc-adeb-4101-ad21-e92dc9514f9a)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/ead3a5f3-a237-4d90-8417-34582c5056b7)
 
-- After several attempts, I successfully able to upload the php file with command into it.
+- After several attempts, I was successfully able to upload the php file with the command into it.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/ab4526e4-9d5d-4b83-a708-2c6d029021c9)
 
-- Successfully navigating to the file, and by send the command along with the url I got results back.
+- Successfully navigating to the file, and by sending the command along with the URL I got results back.
 
 ![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/ad1aaf01-19ef-4fd7-810c-eb82d56122e0)
 
-- Let's move to get a reverse shell back to our system.
-- For this I inject PHP reverse shell and start Netcat to capture the request.
+- Let's move to get a reverse shell back into our system.
+- For this, I inject a PHP reverse shell and start Netcat to capture the request.
 
 ![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/edc7c18d-ed85-4f10-a531-adaf8b16651b)
 
-- Upon navigating to the file I got the reverse shell back to my netcat listener.
+- Upon navigating to the file I got the reverse shell back to my Netcat listener.
 
 ![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/485b3175-8c03-44da-916d-2a5047882332)
 
