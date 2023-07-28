@@ -2,7 +2,8 @@
 
 - We have a login form with the user account named "Jeremy".
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/4b8e58dc-5780-4748-a687-83b7f3968818)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/cb006310-f3a7-4490-a15f-08002bf63320)
+
 
 - We need brute-forcing to crack the password of a user named "Jeremy"
 - For this let's intercept the request to the Burp suite.
