@@ -1,30 +1,26 @@
-Attacking Authentication - MFA
+# Attacking Authentication - MFA
 
 - We have user credentials as :
   - user: jessamy
   - Password: pasta
   - Target account: Jeremy
 
- ![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/730c64f6-4e49-4aa2-824c-8b1951cb4662)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/66ad163a-0c44-4dee-b81d-2124fcd80324)
 
 - On clicking submit we have landed on the MFA.
-
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/d475c3e5-6bb4-43d5-a242-074357279c52)
-
 - By clicking "found here" we got our code.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/798b6952-60ce-4c2a-8c8f-c36f89e4315e)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/960f7bbb-bf9a-48ac-846c-cfc8032ae84c)
 
 - On submitting the code we successfully logged in.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/3af2a4e6-dc9c-48d5-9c83-567d60d75313)
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/6fe856ec-e9b0-4912-8179-baaafcd97af6)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/a3e7b00b-433b-460c-b613-7ad1f06dd402)
 
 - Now, we will again try to log in, but this time we will intercept the request to burp suite on entering MFA.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/df271bf5-20a6-443c-a882-893e3026b6b7)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/66b47b9e-aaf4-4855-b77d-618eb04bc362)
 
 - In request, we will change the name from "jessamy" to "jeremy" and hit the intercept off, in browser we get successfully logged in as Jeremy.
 
-![image](https://github.com/thesinghsec/WebVulnLab/assets/126919241/0f555ff8-7a6a-4185-95ba-5f0ebe78c36d)
+![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/b0ba2d29-940e-4f88-b051-0f73ed8d7d42)
 
