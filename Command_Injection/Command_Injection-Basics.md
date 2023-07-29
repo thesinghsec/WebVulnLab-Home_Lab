@@ -12,7 +12,7 @@
 
 ![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/78f51f72-93a6-4d82-9e01-c61ea3cc351d)
 
-- By utilizing the command `https://<IP>; cat /etc/passwd;asd` I successfully retrieved the user information.
+- By utilizing the command `https://<IP>; cat /etc/passwd;asd` I successfully retrieved the user information
 
 ![image](https://github.com/thesinghsec/WebVulnLab-Home_Lab/assets/126919241/38d63085-e598-4ef8-8ece-321b48ec0e98)
 
