@@ -14,7 +14,7 @@ WebVulnLab is a collection of my hands-on practice sessions aimed at improving m
 
 ## Getting Started
 
-To explore my practice findings in WebVulnLab, simply clone this repository to your local machine. Navigate through the exercise and challenge directories to access my documentation and insights. Feel free to review, learn from, and adapt my methodologies to further enhance your own understanding of web security.
+To explore my practice findings in WebVulnLab, simply clone this repository to your local machine. Navigate through the exercise and challenge directories to access my documentation and insights. Feel free to review, learn from, and adapt my methodologies to further enhance your understanding of web security.
 
 ## Contribution
 
@@ -22,7 +22,7 @@ I appreciate feedback and suggestions from the community to improve my findings 
 
 ## Disclaimer
 
-Please note that the findings in this repository are based on my personal practice and exploration. Always ensure proper authorization and adhere to ethical hacking principles and legal guidelines when conducting web vulnerability testing.
+Please note that the findings in this repository are based on my practice and exploration. Always ensure proper authorization and adhere to ethical hacking principles and legal guidelines when conducting web vulnerability testing.
 
 Enjoy exploring my practice findings and delving into the fascinating world of web security!
 
